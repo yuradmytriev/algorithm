@@ -1,0 +1,25 @@
+TODO если элементов 9
+
+const arr = [1, 3, 4, 2, 6, 5, 0, 7, 7, 7];
+
+const position = (item, lengthOfArray) => {
+
+	  const procent = (item / lengthOfArray) * 100;
+    const pos = (procent * lengthOfArray) / 100;
+    
+    return pos;
+}
+
+const set = array => {
+	let sorted = [];
+  const lengthOfArray = array.length;
+  
+	array.map((item, index) => {
+    const pos = position(item, lengthOfArray);
+    sorted[pos] = item;
+	})
+  
+  return sorted;
+}
+
+console.log(set(arr))
